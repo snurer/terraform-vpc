@@ -68,4 +68,5 @@ terraform apply
 Thank you for reading! Please don't hesitate to clone, use and contribute!
 
 ```https://github.com/snurer/terraform-session-october.git```
+
 Author: [snurer](https://github.com/snurer)
