@@ -83,5 +83,20 @@ variable "public_subnet_cidrs" {
 }
 ```
 
+Then, while creating 3 VPC resources with the same configurations, we used ```element``` function and ```count.index```
 
+```
+resource "aws_subnet" "public_subnet" {
+  count                   = 3
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = element(var.public_subnet_cidrs, count.index)
+  map_public_ip_on_launch = true
+  availability_zone       = element(var.subnet_AZs, count.index)
+  tags = {
+    "Name" = "${var.env}-public-subnet-${count.index}"
+  }
+}
+```
+
+By this way, instead of having the same lines for 3 times to create VPC, we used ```count``` to create 3 VPC resources, and also ```element``` function to retrieve values from our ```public_subnet_cidr``` or ```subnet_AZs``` lists defined in our variables.
 
