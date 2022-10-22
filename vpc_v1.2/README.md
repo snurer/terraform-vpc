@@ -67,6 +67,8 @@ This code will create 3 similar EC2 instances and it will name it as "dev-0", "d
 
 **Note**: You have to use ```count``` to use ```count.index```
 
+Check out [Terraform-Count Meta Argument](https://developer.hashicorp.com/terraform/language/meta-arguments/count) to learn more.
+
 # Combining Element Function, Count and Count.Index
 
 In VPC v1.2, we combined these functions and meta arguments to improve our code. This allowed us to have less lines, more organized and clean code.
