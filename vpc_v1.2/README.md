@@ -100,5 +100,18 @@ resource "aws_subnet" "public_subnet" {
 }
 ```
 
-By this way, instead of having the same lines for 3 times to create VPC, we used ```count``` to create 3 VPC resources, and also ```element``` function to retrieve values from our ```public_subnet_cidr``` or ```subnet_AZs``` lists defined in our variables.
+By this way, instead of having the same lines for 3 times to create VPC, we used ```count``` to create 3 VPC resources, and also ```element``` function to retrieve values from our ```public_subnet_cidr``` or ```subnet_AZs``` lists defined in our variables. 
+
+So, ```element``` goes and gets values in ```public_subnet_cidrs``` and distributes to "public_subnets" in a row with the help of ```count.index```
+
+-------
+
+# Contribution
+
+I hope the explanations are helpful!
+
+Feel free to clone, use and contribute!
+
+Author: [snurer](https://github.com/snurer)
+
 
