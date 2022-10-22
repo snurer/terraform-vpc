@@ -67,4 +67,8 @@ This code will create 3 similar EC2 instances and it will name it as "dev-0", "d
 
 **Note**: You have to use ```count``` to use ```count.index```
 
+# Combining Element Function, Count and Count.Index
+
+
+
 
