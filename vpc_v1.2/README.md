@@ -69,6 +69,19 @@ This code will create 3 similar EC2 instances and it will name it as "dev-0", "d
 
 # Combining Element Function, Count and Count.Index
 
+In VPC v1.2, we combined these functions and meta arguments to improve our code. This allowed us to have less lines, more organized and clean code.
+
+To achive this;
+
+First, we defined variables with the lists for the elements that we would create multiple times. For example:
+
+```
+variable "public_subnet_cidrs" {
+  type        = list(string)
+  description = "This is a list of ports for Public Subnet CIDRs"
+  default     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+}
+```
 
 
 
